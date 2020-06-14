@@ -1,6 +1,6 @@
 import { expect as expectCDK, matchTemplate, MatchStyle } from '@aws-cdk/assert';
 import * as cdk from '@aws-cdk/core';
-import * as LawrenceHue from '../lib/lawrence-hue-stack';
+import * as LawrenceHue from '../lib/stacks/lawrence-hue-stack';
 
 test('Empty Stack', () => {
     const app = new cdk.App();
