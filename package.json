@@ -22,10 +22,13 @@
   },
   "dependencies": {
     "@aws-cdk/aws-apigateway": "^1.45.0",
+    "@aws-cdk/aws-iam": "^1.45.0",
     "@aws-cdk/aws-lambda": "^1.45.0",
     "@aws-cdk/aws-secretsmanager": "^1.45.0",
     "@aws-cdk/core": "1.45.0",
     "@types/aws-lambda": "^8.10.56",
+    "ask-sdk": "^2.8.0",
+    "ask-sdk-model": "^1.28.0",
     "http-status-codes": "^1.4.0",
     "rollup": "^2.16.1",
     "source-map-support": "^0.5.16",

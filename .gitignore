@@ -11,3 +11,4 @@ cdk.out
 .cache
 .build
 .yarn/cache
+.yarn/install-state.gz

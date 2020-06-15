@@ -173,7 +173,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-cdk/aws-iam@npm:1.45.0":
+"@aws-cdk/aws-iam@npm:1.45.0, @aws-cdk/aws-iam@npm:^1.45.0":
   version: 1.45.0
   resolution: "@aws-cdk/aws-iam@npm:1.45.0"
   dependencies:
@@ -1713,6 +1713,53 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ask-sdk-core@npm:^2.8.0":
+  version: 2.8.0
+  resolution: "ask-sdk-core@npm:2.8.0"
+  dependencies:
+    ask-sdk-runtime: ^2.8.0
+  peerDependencies:
+    ask-sdk-model: ^1.9.0
+  checksum: dde6a2f79fc45bb08f3ed08d0ef2011d0d63a6d8ce6a04b9c6bf0b88f29ee149c3f86df140fee12e07052f96352ba3e984d93b5114f86288f9d9a0e4dac10bd9
+  languageName: node
+  linkType: hard
+
+"ask-sdk-dynamodb-persistence-adapter@npm:^2.8.0":
+  version: 2.8.0
+  resolution: "ask-sdk-dynamodb-persistence-adapter@npm:2.8.0"
+  dependencies:
+    aws-sdk: ^2.163.0
+  peerDependencies:
+    ask-sdk-core: ^2.0.0
+  checksum: b1ab24b3b349f932f2176909ec1e6444e28173d90ded42c64e68146eaef89ccc131a0c97bfad437a1698acdfcf0806f3a5cbb9a91ec37b5d2d5962dcf4d6c327
+  languageName: node
+  linkType: hard
+
+"ask-sdk-model@npm:^1.28.0, ask-sdk-model@npm:^1.9.0":
+  version: 1.28.0
+  resolution: "ask-sdk-model@npm:1.28.0"
+  checksum: b30996647d3caffb18f119e27c83a4c7d1eb74ba2f63f361f9b8d701596195d6ca6bd3956fd2f82722aa81f7b7571144437e066a2271f90df6e4c48202973642
+  languageName: node
+  linkType: hard
+
+"ask-sdk-runtime@npm:^2.8.0":
+  version: 2.8.0
+  resolution: "ask-sdk-runtime@npm:2.8.0"
+  checksum: 3ba5183adf3508148165e0bf4fa511266346fe911dbb0364b1ebb5a3ce3169f2be148f565901cc86c7e6ddbe2a854eb6b31f0cde16e0e7753dc3358fe673cd7a
+  languageName: node
+  linkType: hard
+
+"ask-sdk@npm:^2.8.0":
+  version: 2.8.0
+  resolution: "ask-sdk@npm:2.8.0"
+  dependencies:
+    ask-sdk-core: ^2.8.0
+    ask-sdk-dynamodb-persistence-adapter: ^2.8.0
+    ask-sdk-model: ^1.9.0
+  checksum: 30b8e76526e07ae6927d8c302a577f9ba12a7774f8897f5b79d42d75b5197ae65ac7050969620f8bb25628065ee8bc2cff10cc4e38a65a56043464c9ab80043e
+  languageName: node
+  linkType: hard
+
 "asn1.js@npm:^4.0.0":
   version: 4.10.1
   resolution: "asn1.js@npm:4.10.1"
@@ -1843,7 +1890,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aws-sdk@npm:^2.691.0":
+"aws-sdk@npm:^2.163.0, aws-sdk@npm:^2.691.0":
   version: 2.696.0
   resolution: "aws-sdk@npm:2.696.0"
   dependencies:
@@ -5239,12 +5286,15 @@ fsevents@^1.2.7:
   dependencies:
     "@aws-cdk/assert": 1.42.1
     "@aws-cdk/aws-apigateway": ^1.45.0
+    "@aws-cdk/aws-iam": ^1.45.0
     "@aws-cdk/aws-lambda": ^1.45.0
     "@aws-cdk/aws-secretsmanager": ^1.45.0
     "@aws-cdk/core": 1.45.0
     "@types/aws-lambda": ^8.10.56
     "@types/jest": ^26.0.0
     "@types/node": 10.17.5
+    ask-sdk: ^2.8.0
+    ask-sdk-model: ^1.28.0
     aws-cdk: 1.45.0
     http-status-codes: ^1.4.0
     jest: ^25.5.0
