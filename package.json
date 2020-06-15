@@ -4,13 +4,13 @@
   "bin": "bin/lawrence-hue.js",
   "scripts": {
     "build": "tsc",
-    "pack": "webpack --progress --mode production",
+    "bundle": "webpack --progress --mode production",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
     "deploy:skill": "ask deploy",
     "deploy:stack": "cdk deploy",
-    "deploy": "yarn build && yarn pack && yarn deploy:stack && yarn deploy:skill"
+    "deploy": "yarn build && yarn bundle && yarn deploy:stack && yarn deploy:skill"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.42.1",
