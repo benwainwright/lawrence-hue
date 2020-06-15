@@ -11,15 +11,14 @@
     "noImplicitThis": true,
     "alwaysStrict": true,
     "noUnusedLocals": false,
-    "types": ["node"],
+    "types": ["node", "jest"],
     "noUnusedParameters": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": false,
     "inlineSourceMap": true,
     "inlineSources": true,
     "experimentalDecorators": true,
-    "strictPropertyInitialization": false,
-    "typeRoots": ["./node_modules/@types"]
+    "strictPropertyInitialization": false
   },
   "exclude": ["cdk.out", "node_modules", "dist"]
 }
