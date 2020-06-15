@@ -31,5 +31,17 @@ describe("The auth function", () => {
 
   it("Returns a 200 with a printed code when there is a code supplied", async () => {
 
+    const mockEvent = (jest.fn() as unknown) as Lambda.APIGatewayProxyEvent;
+    mockEvent.queryStringParameters = {
+      code: Verify.Gen.string()
+    };
+    const response = await handler(mockEvent, {} as any, {} as any);
+
+    expect(response).toBeDefined();
+
+    if (response) {
+      expect(response.statusCode).toEqual(HttpStatusCodes.OK);
+    }
+
   });
 });
