@@ -30,11 +30,12 @@
     "@aws-cdk/aws-secretsmanager": "^1.45.0",
     "@aws-cdk/core": "1.45.0",
     "@types/aws-lambda": "^8.10.56",
+    "@types/source-map-support": "^0.5.1",
     "ask-sdk": "^2.8.0",
     "ask-sdk-model": "^1.28.0",
     "http-status-codes": "^1.4.0",
     "rollup": "^2.16.1",
-    "source-map-support": "^0.5.16",
+    "source-map-support": "^0.5.19",
     "verify-it": "^2.3.2",
     "webpack": "^4.43.0"
   }

@@ -1,3 +1,5 @@
+import "source-map-support";
+
 import * as Alexa from "ask-sdk";
 import * as AlexaModel from "ask-sdk-model";
 
@@ -15,7 +17,7 @@ const handle = (handlerInput: Alexa.HandlerInput): AlexaModel.Response => {
     .getResponse();
 };
 
-const LaunchRequestHandler: Alexa.RequestHandler = {
+export const handler: Alexa.RequestHandler = {
   canHandle,
   handle,
 };

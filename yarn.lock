@@ -1228,6 +1228,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/source-map-support@npm:^0.5.1":
+  version: 0.5.1
+  resolution: "@types/source-map-support@npm:0.5.1"
+  dependencies:
+    "@types/node": "*"
+  checksum: 9b36338825696b330e5a80d6f050533fa1577b02d26ce19033a9d04545d4e90c22280405a76fab6cc0164ab2dc7a51bfd5dc4d97bd681ac0cea7d0f9b3c2ae26
+  languageName: node
+  linkType: hard
+
 "@types/stack-utils@npm:^1.0.1":
   version: 1.0.1
   resolution: "@types/stack-utils@npm:1.0.1"
@@ -5293,13 +5302,14 @@ fsevents@^1.2.7:
     "@types/aws-lambda": ^8.10.56
     "@types/jest": ^26.0.0
     "@types/node": 10.17.5
+    "@types/source-map-support": ^0.5.1
     ask-sdk: ^2.8.0
     ask-sdk-model: ^1.28.0
     aws-cdk: 1.45.0
     http-status-codes: ^1.4.0
     jest: ^25.5.0
     rollup: ^2.16.1
-    source-map-support: ^0.5.16
+    source-map-support: ^0.5.19
     ts-jest: ^25.3.1
     ts-node: ^8.1.0
     typescript: ^3.9.5
@@ -7313,7 +7323,7 @@ resolve@1.1.7:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:^0.5.16, source-map-support@npm:^0.5.17, source-map-support@npm:^0.5.19, source-map-support@npm:^0.5.6, source-map-support@npm:~0.5.12":
+"source-map-support@npm:^0.5.17, source-map-support@npm:^0.5.19, source-map-support@npm:^0.5.6, source-map-support@npm:~0.5.12":
   version: 0.5.19
   resolution: "source-map-support@npm:0.5.19"
   dependencies:
