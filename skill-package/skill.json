@@ -2,22 +2,21 @@
   "manifest": {
     "publishingInformation": {
       "locales": {
-        "en-US": {
-          "summary": "Sample Short Description",
+        "en-GB": {
+          "summary": "Controlling Phillips Hue Lights",
           "examplePhrases": [
             "Alexa open hello world",
             "hello",
             "help"
           ],
-          "name": "test",
-          "description": "Sample Full Description"
+          "name": "Lawrence's Lights",
+          "description": "Controlling Phillips Hue Lights"
         }
       },
       "isAvailableWorldwide": true,
       "testingInstructions": "Sample Testing Instructions.",
       "category": "KNOWLEDGE_AND_TRIVIA",
-      "distributionMode": "PRIVATE",
-      "distributionCountries": []
+      "distributionMode": "PRIVATE"
     },
     "apis": {
       "custom": {
