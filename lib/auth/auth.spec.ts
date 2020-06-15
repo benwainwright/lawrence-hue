@@ -28,4 +28,8 @@ describe("The auth function", () => {
     delete process.env.APP_ID;
     delete process.env.DEVICE_ID;
   });
+
+  it("Returns a 200 with a printed code when there is a code supplied", async () => {
+
+  });
 });
