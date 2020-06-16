@@ -5,7 +5,6 @@ import * as path from "path";
 import * as secretsmanager from "@aws-cdk/aws-secretsmanager";
 import * as iam from "@aws-cdk/aws-iam";
 import { SecretValue } from "@aws-cdk/core";
-import { Code } from "@aws-cdk/aws-lambda";
 
 const ID_BASE = "LawrenceHueApp";
 
@@ -14,14 +13,14 @@ export class LawrenceHueStack extends cdk.Stack {
     super(scope, `${ID_BASE}Stack`, props);
 
     const clientId = new secretsmanager.Secret(this, `${ID_BASE}ClientId`, {
-      secretName: `${ID_BASE}/CLIENT_ID`,
+      secretName: `${ID_BASE}/CLIENT_ID`
     });
 
     const clientSecret = new secretsmanager.Secret(
       this,
       `${ID_BASE}ClientSecret`,
       {
-        secretName: `${ID_BASE}/CLIENT_SECRET`,
+        secretName: `${ID_BASE}/CLIENT_SECRET`
       }
     );
 
@@ -30,7 +29,7 @@ export class LawrenceHueStack extends cdk.Stack {
       handler: "skill.handler",
       code: lambda.Code.fromAsset(
         path.join(__dirname, "..", "..", "dist", "bundles", "skill")
-      ),
+      )
     });
 
     skillFunction.grantInvoke(
@@ -47,8 +46,8 @@ export class LawrenceHueStack extends cdk.Stack {
         CLIENT_ID: SecretValue.secretsManager(clientId.secretArn).toString(),
         CLIENT_SECRET: SecretValue.secretsManager(
           clientSecret.secretArn
-        ).toString(),
-      },
+        ).toString()
+      }
     });
 
     const api = new apigateway.RestApi(this, `${ID_BASE}Api`);

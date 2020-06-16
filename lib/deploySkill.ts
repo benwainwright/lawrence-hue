@@ -7,7 +7,7 @@ const LINKING_CONFIG_FILE_NAME = "accountLinking.json";
 
 const dirExists = async (path: string) => {
   try {
-    const stat = await fs.stat("dist");
+    const stat = await fs.stat(path);
     return stat.isDirectory();
   } catch {
     return false;
@@ -32,7 +32,7 @@ const dirExists = async (path: string) => {
     accessTokenUrl: "https://api.meethue.com/oauth2/auth",
     type: "AUTH_CODE",
     clientId: id.SecretString,
-    clientSecret: secret.SecretString,
+    clientSecret: secret.SecretString
   });
 
   console.log("Writing config to disk");
@@ -52,6 +52,5 @@ const dirExists = async (path: string) => {
   const matches = skillIdRegex.exec(stdout.toString());
   const skillId = matches?.groups?.skillId;
 
-  console.log("Updating account linking info")
-
-})().catch((error) => console.log(error));
+  console.log("Updating account linking info");
+})().catch(error => console.log(error));
