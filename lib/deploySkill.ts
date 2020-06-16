@@ -1,6 +1,7 @@
 import * as AWS from "aws-sdk";
 import { promises as fs } from "fs";
 import * as path from "path";
+import * as execa from "execa";
 
 const LINKING_CONFIG_FILE_NAME = "accountLinking.json";
 
@@ -44,4 +45,13 @@ const dirExists = async (path: string) => {
     path.resolve(process.cwd(), "dist", LINKING_CONFIG_FILE_NAME),
     config
   );
+
+  console.log("Deploying skill");
+  const { stdout } = await execa.command("ask deploy");
+  const skillIdRegex = /^Skill ID: (?<skillId>.*)$/gm;
+  const matches = skillIdRegex.exec(stdout.toString());
+  const skillId = matches?.groups?.skillId;
+
+  console.log("Updating account linking info")
+
 })().catch((error) => console.log(error));
