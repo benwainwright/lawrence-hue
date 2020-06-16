@@ -13,7 +13,7 @@
     "deploy": "yarn build && yarn bundle && yarn deploy:stack && yarn deploy:skill"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "1.42.1",
+    "@aws-cdk/assert": "1.45.0",
     "@types/jest": "^26.0.0",
     "@types/node": "10.17.5",
     "aws-cdk": "1.45.0",
@@ -33,6 +33,7 @@
     "@types/source-map-support": "^0.5.1",
     "ask-sdk": "^2.8.0",
     "ask-sdk-model": "^1.28.0",
+    "aws-sdk": "^2.697.0",
     "http-status-codes": "^1.4.0",
     "rollup": "^2.16.1",
     "source-map-support": "^0.5.19",

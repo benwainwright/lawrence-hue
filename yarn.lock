@@ -5,20 +5,20 @@ __metadata:
   version: 4
   cacheKey: 4
 
-"@aws-cdk/assert@npm:1.42.1":
-  version: 1.42.1
-  resolution: "@aws-cdk/assert@npm:1.42.1"
+"@aws-cdk/assert@npm:1.45.0":
+  version: 1.45.0
+  resolution: "@aws-cdk/assert@npm:1.45.0"
   dependencies:
-    "@aws-cdk/cloud-assembly-schema": 1.42.1
-    "@aws-cdk/cloudformation-diff": 1.42.1
-    "@aws-cdk/core": 1.42.1
-    "@aws-cdk/cx-api": 1.42.1
+    "@aws-cdk/cloud-assembly-schema": 1.45.0
+    "@aws-cdk/cloudformation-diff": 1.45.0
+    "@aws-cdk/core": 1.45.0
+    "@aws-cdk/cx-api": 1.45.0
     constructs: ^3.0.2
   peerDependencies:
-    "@aws-cdk/core": 1.42.1
+    "@aws-cdk/core": 1.45.0
     constructs: ^3.0.2
     jest: ^25.5.4
-  checksum: fc230ca99eaaa41c3c0bf8504ea23aea70722efd97a3c71ffa8243853dfe230c4969f5aeab74d30217934ff39d7b068da9a291a8bb87687eb10abd748dd5d9c0
+  checksum: d8f9b1c4c346e2b7679dcae9dbfaf2946597a5bfb26ee69a9332a4f5a065f7a3c24faad2db5511efc0bc6c6010b4c060540a1f603cc08537387ff749f3b6d0fe
   languageName: node
   linkType: hard
 
@@ -384,30 +384,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-cdk/cdk-assets-schema@npm:1.42.1":
-  version: 1.42.1
-  resolution: "@aws-cdk/cdk-assets-schema@npm:1.42.1"
-  dependencies:
-    semver: ^7.2.2
-  checksum: 1517dae293bc40acfb92420797c19b2d0b40641a96380183e1baad0e518002ad0faa29f82251081cc69761557696869e581326ecb4abeea461f63b131312647a
-  languageName: node
-  linkType: hard
-
 "@aws-cdk/cdk-assets-schema@npm:1.45.0":
   version: 1.45.0
   resolution: "@aws-cdk/cdk-assets-schema@npm:1.45.0"
   dependencies:
     semver: ^7.2.2
   checksum: 79b11bcb558caf0b600a325c878515ba351d6f975a12d72ad6ccdda3da6337d0ac174dc4626cbdb5b7b6fd531766931013f75cde0f0b3fabe9216cb1b05acf6f
-  languageName: node
-  linkType: hard
-
-"@aws-cdk/cfnspec@npm:1.42.1":
-  version: 1.42.1
-  resolution: "@aws-cdk/cfnspec@npm:1.42.1"
-  dependencies:
-    md5: ^2.2.1
-  checksum: 41e38720b849dd5f70356e3717da8531bb92bcc012204281176c6336e7a6b8db32759b16ff9d7edb83cb63c11f5fc986e63c3ccc417292b5bacab8bb33529960
   languageName: node
   linkType: hard
 
@@ -420,16 +402,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-cdk/cloud-assembly-schema@npm:1.42.1":
-  version: 1.42.1
-  resolution: "@aws-cdk/cloud-assembly-schema@npm:1.42.1"
-  dependencies:
-    jsonschema: ^1.2.5
-    semver: ^7.2.2
-  checksum: 348240addbe47aee0e8e811cd6c28d1c83e50c6ea830804e59256b276c950667a3e5dfd13b142a934d00ac5d529778dbf845e446c90d99fa3e327323b8b882fe
-  languageName: node
-  linkType: hard
-
 "@aws-cdk/cloud-assembly-schema@npm:1.45.0":
   version: 1.45.0
   resolution: "@aws-cdk/cloud-assembly-schema@npm:1.45.0"
@@ -437,20 +409,6 @@ __metadata:
     jsonschema: ^1.2.5
     semver: ^7.2.2
   checksum: 3e20906debf7b6394e250d94fe0697c369eb93c1b74c4d693df02343db797b6c5c17fded5a96d443b6b7ef3c8a25f6afe135d8c0d99c680a179ed30933b2ff99
-  languageName: node
-  linkType: hard
-
-"@aws-cdk/cloudformation-diff@npm:1.42.1":
-  version: 1.42.1
-  resolution: "@aws-cdk/cloudformation-diff@npm:1.42.1"
-  dependencies:
-    "@aws-cdk/cfnspec": 1.42.1
-    colors: ^1.4.0
-    diff: ^4.0.2
-    fast-deep-equal: ^3.1.1
-    string-width: ^4.2.0
-    table: ^5.4.6
-  checksum: de01ed5c5c3e0128829aef959fbb57d12a3e9037b1cf361d201b701d03fe253cf67954400c2784bf87a5ac608a2bef64ac6ba83af123bee7b48cb6b4568bdcd6
   languageName: node
   linkType: hard
 
@@ -465,24 +423,6 @@ __metadata:
     string-width: ^4.2.0
     table: ^5.4.6
   checksum: 39f766071b1e779204ce8d45cdbcbd1cc7e8bf3ea578777a00198f921524249179bbda48bf6a67faa5f43e11b1abeb66cd8c1a13f3703c0df032ee3a30920212
-  languageName: node
-  linkType: hard
-
-"@aws-cdk/core@npm:1.42.1":
-  version: 1.42.1
-  resolution: "@aws-cdk/core@npm:1.42.1"
-  dependencies:
-    "@aws-cdk/cdk-assets-schema": 1.42.1
-    "@aws-cdk/cloud-assembly-schema": 1.42.1
-    "@aws-cdk/cx-api": 1.42.1
-    constructs: ^3.0.2
-    minimatch: ^3.0.4
-  peerDependencies:
-    "@aws-cdk/cdk-assets-schema": 1.42.1
-    "@aws-cdk/cloud-assembly-schema": 1.42.1
-    "@aws-cdk/cx-api": 1.42.1
-    constructs: ^3.0.2
-  checksum: c9e37a6b85a409e1805df15fcdfd7b42c4ce7c7ed4195449322dacaa83d1480f981c4061203781d0fd56a351910d130deeb3658ed75377977f3369921af7c629
   languageName: node
   linkType: hard
 
@@ -501,18 +441,6 @@ __metadata:
     "@aws-cdk/cx-api": 1.45.0
     constructs: ^3.0.2
   checksum: bf4c8975bba39fd8758c76a8a3cc0e1de75456813d063cf1eca4be16eaf226c826653d277518f3ca0e64b2b25e1ae6b16679c865a925a67f893d6dc7b6270ae3
-  languageName: node
-  linkType: hard
-
-"@aws-cdk/cx-api@npm:1.42.1":
-  version: 1.42.1
-  resolution: "@aws-cdk/cx-api@npm:1.42.1"
-  dependencies:
-    "@aws-cdk/cloud-assembly-schema": 1.42.1
-    semver: ^7.2.2
-  peerDependencies:
-    "@aws-cdk/cloud-assembly-schema": 1.42.1
-  checksum: 2abc943dc98171b9a0e43ce547ed7ddbcb58f2ea7f6635a91e8f92238213047299ee4e7ac4e486c73433c814dd364df5767bdeb17e95656bbfd0c5003cb11e63
   languageName: node
   linkType: hard
 
@@ -1913,6 +1841,23 @@ __metadata:
     uuid: 3.3.2
     xml2js: 0.4.19
   checksum: 2b25ac912c0779586bfdf84429b0de01176935b7d0288fc7b413d7ef7d6f8a9222533ebee16a133b10e506f564a83a0f1aad04f9c6c1c2964a8bc80eee35e40a
+  languageName: node
+  linkType: hard
+
+"aws-sdk@npm:^2.697.0":
+  version: 2.697.0
+  resolution: "aws-sdk@npm:2.697.0"
+  dependencies:
+    buffer: 4.9.2
+    events: 1.1.1
+    ieee754: 1.1.13
+    jmespath: 0.15.0
+    querystring: 0.2.0
+    sax: 1.2.1
+    url: 0.10.3
+    uuid: 3.3.2
+    xml2js: 0.4.19
+  checksum: 2d8bca6f228eba6e54c111ff44a1f035799838ceddc05a85538b4a7590d10e6f74e722e2e8c8b2d77568c285a900bcb9109e3bc7b66e9a47f1e36ef51fc85826
   languageName: node
   linkType: hard
 
@@ -5293,7 +5238,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "lawrence-hue@workspace:."
   dependencies:
-    "@aws-cdk/assert": 1.42.1
+    "@aws-cdk/assert": 1.45.0
     "@aws-cdk/aws-apigateway": ^1.45.0
     "@aws-cdk/aws-iam": ^1.45.0
     "@aws-cdk/aws-lambda": ^1.45.0
@@ -5306,6 +5251,7 @@ fsevents@^1.2.7:
     ask-sdk: ^2.8.0
     ask-sdk-model: ^1.28.0
     aws-cdk: 1.45.0
+    aws-sdk: ^2.697.0
     http-status-codes: ^1.4.0
     jest: ^25.5.0
     rollup: ^2.16.1
