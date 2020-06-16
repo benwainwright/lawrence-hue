@@ -3,14 +3,15 @@
   "version": "0.1.0",
   "bin": "bin/lawrence-hue.js",
   "scripts": {
-    "build": "tsc",
+    "build:typescript": "tsc",
+    "build:linkingConfig": "ts-node lib/generateAccountLinkingConfig.ts",
     "bundle": "webpack --progress --mode production",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
     "deploy:skill": "ask deploy",
     "deploy:stack": "cdk deploy",
-    "deploy": "yarn build && yarn bundle && yarn deploy:stack && yarn deploy:skill"
+    "deploy": "yarn build:typescript && yarn bundle && yarn deploy:stack && yarn deploy:skill"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.45.0",
@@ -19,7 +20,7 @@
     "aws-cdk": "1.45.0",
     "jest": "^25.5.0",
     "ts-jest": "^25.3.1",
-    "ts-node": "^8.1.0",
+    "ts-node": "^8.10.2",
     "typescript": "^3.9.5",
     "webpack-cli": "^3.3.11"
   },

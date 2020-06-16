@@ -13,3 +13,4 @@ cdk.out
 .yarn/cache
 .yarn/install-state.gz
 .ask
+accountLinking.json

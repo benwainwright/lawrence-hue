@@ -5257,7 +5257,7 @@ fsevents@^1.2.7:
     rollup: ^2.16.1
     source-map-support: ^0.5.19
     ts-jest: ^25.3.1
-    ts-node: ^8.1.0
+    ts-node: ^8.10.2
     typescript: ^3.9.5
     verify-it: ^2.3.2
     webpack: ^4.43.0
@@ -7871,7 +7871,7 @@ resolve@1.1.7:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^8.1.0":
+"ts-node@npm:^8.10.2":
   version: 8.10.2
   resolution: "ts-node@npm:8.10.2"
   dependencies:
