@@ -4,6 +4,15 @@ import * as path from "path";
 
 const LINKING_CONFIG_FILE_NAME = "accountLinking.json";
 
+const dirExists = async (path: string) => {
+  try {
+    const stat = await fs.stat("dist");
+    return stat.isDirectory();
+  } catch {
+    return false;
+  }
+};
+
 (async () => {
   const secretsManager = new AWS.SecretsManager({ region: "us-east-1" });
 
@@ -26,5 +35,13 @@ const LINKING_CONFIG_FILE_NAME = "accountLinking.json";
   });
 
   console.log("Writing config to disk");
-  fs.writeFile(path.resolve(process.cwd(), LINKING_CONFIG_FILE_NAME), config);
+
+  if (!(await dirExists("dist"))) {
+    await fs.mkdir("dist");
+  }
+
+  await fs.writeFile(
+    path.resolve(process.cwd(), "dist", LINKING_CONFIG_FILE_NAME),
+    config
+  );
 })().catch((error) => console.log(error));

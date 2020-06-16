@@ -29,7 +29,7 @@ export class LawrenceHueStack extends cdk.Stack {
       runtime: lambda.Runtime.NODEJS_12_X,
       handler: "skill.handler",
       code: lambda.Code.fromAsset(
-        path.join(__dirname, "..", "..", "bundles", "skill")
+        path.join(__dirname, "..", "..", "dist", "bundles", "skill")
       ),
     });
 
@@ -41,7 +41,7 @@ export class LawrenceHueStack extends cdk.Stack {
       runtime: lambda.Runtime.NODEJS_12_X,
       handler: "auth.handler",
       code: lambda.Code.fromAsset(
-        path.join(__dirname, "..", "..", "bundles", "auth")
+        path.join(__dirname, "..", "..", "dist", "bundles", "auth")
       ),
       environment: {
         CLIENT_ID: SecretValue.secretsManager(clientId.secretArn).toString(),
