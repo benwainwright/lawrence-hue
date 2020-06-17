@@ -1853,9 +1853,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aws-sdk@npm:^2.697.0":
-  version: 2.697.0
-  resolution: "aws-sdk@npm:2.697.0"
+"aws-sdk@npm:^2.698.0":
+  version: 2.698.0
+  resolution: "aws-sdk@npm:2.698.0"
   dependencies:
     buffer: 4.9.2
     events: 1.1.1
@@ -1866,7 +1866,7 @@ __metadata:
     url: 0.10.3
     uuid: 3.3.2
     xml2js: 0.4.19
-  checksum: 2d8bca6f228eba6e54c111ff44a1f035799838ceddc05a85538b4a7590d10e6f74e722e2e8c8b2d77568c285a900bcb9109e3bc7b66e9a47f1e36ef51fc85826
+  checksum: 9c0b16510af16dc07f2e51dea4a3cc961f1a833718229076579907e5b1a41b0ac9161ee3da9ff4505f2eb6fa8e43e8f7bb3910275d53bee7a180cdba3d2b1246
   languageName: node
   linkType: hard
 
@@ -5372,7 +5372,7 @@ fsevents@^1.2.7:
     ask-sdk: ^2.8.0
     ask-sdk-model: ^1.28.0
     aws-cdk: 1.45.0
-    aws-sdk: ^2.697.0
+    aws-sdk: ^2.698.0
     execa: ^4.0.2
     http-status-codes: ^1.4.0
     jest: ^25.5.0
