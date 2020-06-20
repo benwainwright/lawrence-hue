@@ -9,14 +9,14 @@ export const handler: Lambda.APIGatewayProxyHandler = async (
     return {
       statusCode: HttpStatusCodes.MOVED_TEMPORARILY,
       headers: {
-        location: `${constants.HUE_API}/oauth2/auth?clientid=${process.env.CLIENT_ID}&appid=${process.env.APP_ID}&deviceid=${constants.DEVICE_ID}&response_type=code`,
+        location: `${constants.HUE_API}/oauth2/auth?clientid=${process.env.CLIENT_ID}&appid=${process.env.APP_ID}&deviceid=${constants.DEVICE_ID}&response_type=code`
       },
-      body: "Redirecting",
+      body: "Redirecting"
     };
   } else {
     return {
       statusCode: HttpStatusCodes.OK,
-      body: "Success",
+      body: "Success"
     };
   }
 };

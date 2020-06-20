@@ -1,11 +1,14 @@
 import * as AWS from "aws-sdk";
-import * as execa from "execa";
+import * as childProcess from "child_process";
+import * as util from "util";
+
+const exec = util.promisify(childProcess.exec);
 
 (async () => {
   const secretsManager = new AWS.SecretsManager({ region: "us-east-1" });
 
   console.log("Deploying skill");
-  const { stdout } = await execa.command("ask deploy");
+  const { stdout } = await exec("ask deploy");
   const skillIdRegex = /^Skill ID: (?<skillId>.*)$/gm;
   const matches = skillIdRegex.exec(stdout.toString());
   const skillId = matches?.groups?.skillId;
@@ -21,11 +24,14 @@ import * as execa from "execa";
     .promise();
 
   const linkingConfig = JSON.stringify({
-    accessTokenScheme: "REQUEST_BODY_CREDENTIALS",
-    accessTokenUrl: "https://api.meethue.com/oauth2/auth",
-    type: "AUTH_CODE",
-    clientId: id.SecretString,
-    clientSecret: secret.SecretString
+    accountLinkingRequest: {
+      accessTokenScheme: "REQUEST_BODY_CREDENTIALS",
+      accessTokenUrl: "https://api.meethue.com/oauth2/auth",
+      authorizationUrl: "https://api.meethue.com/oauth2/auth",
+      type: "AUTH_CODE",
+      clientId: id.SecretString,
+      clientSecret: secret.SecretString
+    }
   });
 
   console.log("Updating account linking info");
@@ -34,6 +40,6 @@ import * as execa from "execa";
                              --stage development \
                              --account-linking-request '${linkingConfig}'`;
 
-  const { stdout: linkingOutput } = await execa.command(command);
+  const { stdout: linkingOutput } = await exec(command);
   console.log(linkingOutput);
 })().catch(error => console.log(error));
