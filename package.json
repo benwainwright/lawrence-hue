@@ -18,7 +18,7 @@
     "@aws-cdk/assert": "^1.46.0",
     "@aws-cdk/aws-apigateway": "^1.46.0",
     "@aws-cdk/aws-iam": "^1.46.0",
-    "@aws-cdk/aws-lambda": "^1.45.0",
+    "@aws-cdk/aws-lambda": "^1.46.0",
     "@aws-cdk/aws-secretsmanager": "^1.46.0",
     "@aws-cdk/core": "^1.46.0",
     "@types/aws-lambda": "^8.10.56",
