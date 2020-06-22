@@ -3,7 +3,7 @@ import * as constants from "./constants";
 import * as url from "url";
 
 export interface Data {
-  [key: string]: string;
+  [key: string]: string | boolean;
 }
 
 export default class HueClient {
@@ -42,13 +42,13 @@ export default class HueClient {
     return this.api.get(url.resolve(username, route), data);
   }
 
-  public async post(route: string, data: Data = {}) {
-    const username = await this.getUsername();
-    return this.api.post(url.resolve(username, route), data);
-  }
-
   public async put(route: string, data: Data = {}) {
     const username = await this.getUsername();
     return this.api.put(url.resolve(username, route), data);
+  }
+
+  public async post(route: string, data: Data = {}) {
+    const username = await this.getUsername();
+    return this.api.post(url.resolve(username, route), data);
   }
 }
