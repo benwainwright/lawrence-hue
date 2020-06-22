@@ -7,6 +7,7 @@
     "bundle": "webpack --progress --mode production",
     "watch": "tsc -w",
     "test": "jest",
+    "test:watch": "jest --watch",
     "cdk": "cdk",
     "deploy:skill": "ts-node lib/deploySkill.ts",
     "deploy:stack": "cdk deploy",
@@ -37,10 +38,13 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
+    "@types/axios": "^0.14.0",
     "ask-sdk": "^2.8.0",
     "ask-sdk-model": "^1.28.0",
     "aws-sdk": "^2.698.0",
+    "axios": "^0.19.2",
     "http-status-codes": "^1.4.0",
+    "nock": "^12.0.3",
     "source-map-support": "^0.5.19"
   }
 }
