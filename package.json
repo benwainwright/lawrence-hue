@@ -6,7 +6,7 @@
     "build": "tsc",
     "bundle": "webpack --progress --mode production",
     "watch": "tsc -w",
-    "test": "jest",
+    "test": "jest --coverage",
     "test:watch": "jest --watch",
     "cdk": "cdk",
     "deploy:skill": "ts-node lib/deploySkill.ts",

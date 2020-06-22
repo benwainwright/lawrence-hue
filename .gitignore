@@ -15,3 +15,4 @@ cdk.out
 .yarn/install-state.gz
 .ask
 accountLinking.json
+coverage
