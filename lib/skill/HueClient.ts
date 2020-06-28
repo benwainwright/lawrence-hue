@@ -3,7 +3,7 @@ import * as constants from "./constants";
 import * as url from "url";
 
 export interface Data {
-  [key: string]: string;
+  [key: string]: string | boolean;
 }
 
 export default class HueClient {

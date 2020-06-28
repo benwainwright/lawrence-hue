@@ -2,11 +2,11 @@ import axios, { AxiosInstance } from "axios";
 import * as constants from "./constants";
 import * as url from "url";
 
-export interface Data {
-  [key: string]: string | boolean;
-}
-
 export default class HueClient {
+  /**
+   * Handles HTTP requests to the Hue Bridge
+   * when provided with an access token
+   */
   private readonly deviceType: string;
   private readonly api: AxiosInstance;
 
@@ -37,17 +37,17 @@ export default class HueClient {
     }
   }
 
-  public async get(route: string, data: Data = {}) {
+  public async get(route: string) {
     const username = await this.getUsername();
-    return this.api.get(url.resolve(username, route), data);
+    return this.api.get(url.resolve(username, route));
   }
 
-  public async put(route: string, data: Data = {}) {
+  public async put(route: string, data: unknown = {}) {
     const username = await this.getUsername();
     return this.api.put(url.resolve(username, route), data);
   }
 
-  public async post(route: string, data: Data = {}) {
+  public async post(route: string, data: unknown = {}) {
     const username = await this.getUsername();
     return this.api.post(url.resolve(username, route), data);
   }
